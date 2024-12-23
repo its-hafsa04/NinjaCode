@@ -1,0 +1,6 @@
+*/node_modules
+/node_modules
+leetcode-1bdec-firebase-adminsdk-orb1s-be580fc140.json
+*.env
+*frontend/.env
+*backend/.env
