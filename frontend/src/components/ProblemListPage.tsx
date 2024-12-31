@@ -19,7 +19,9 @@ const ProblemListPage = () => {
   useEffect(() => {
     const fetchProblems = async () => {
       try {
-        const problemsResponse = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/problems`);
+        const problemsResponse = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/problems`,
+          { withCredentials: true }
+        );
         setProblems(problemsResponse.data);
 
         // Fetch solved problems for current user from Firestore

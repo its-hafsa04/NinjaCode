@@ -75,19 +75,19 @@ class CodeValidator {
     `;
 
     const problemValidators = {
-      problem1: `
+      1: `
           const args = JSON.parse(testCase.input);
           const expectedOutput = JSON.parse(testCase.expectedOutput);
           const actualOutput = twoSum(...args);
           const passed = compareArrays(actualOutput, expectedOutput);
       `,
-      problem2: `
+      2: `
           const args = JSON.parse(testCase.input);
           const expectedOutput = JSON.parse(testCase.expectedOutput);
           const actualOutput = isPalindrome(args);
           const passed = actualOutput === expectedOutput;
       `,
-      problem3: `
+      3: `
           // Remove Duplicates - handle array modification and length return
           const input = JSON.parse(testCase.input);
           const nums = [...input];
@@ -101,13 +101,13 @@ class CodeValidator {
           
           const actualOutput = actualLength;
       `,
-      problem4: `
+      4: `
           const args = JSON.parse(testCase.input);
           const expectedOutput = JSON.parse(testCase.expectedOutput);
           const actualOutput = search(...args);
           const passed = actualOutput === expectedOutput;
       `,
-      problem5: `
+      5: `
           const args = JSON.parse(testCase.input);
           const expectedOutput = JSON.parse(testCase.expectedOutput);
           const actualOutput = maxSubArray(args);

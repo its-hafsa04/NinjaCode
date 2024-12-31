@@ -1,6 +1,6 @@
 [
   {
-    "id": "problem1",
+    "id": "1",
     "title": "Two Sum",
     "difficulty": "Easy", 
     "description": "Given an array of integers and a target sum, return indices of two numbers that add up to the target.",
@@ -33,7 +33,7 @@
     ]
   },
   {
-    "id": "problem2",
+    "id": "2",
     "title": "Palindrome Number",
     "difficulty": "Easy",
     "description": "Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.",
@@ -74,7 +74,7 @@
     ]
   },
   {
-    "id": "problem3",
+    "id": "3",
     "title": "Remove Duplicates from Sorted Array",
     "difficulty": "Easy",
     "description": "Given a sorted array of integers, remove the duplicates in-place such that each element appears only once and return the new length.",
@@ -107,7 +107,7 @@
     ]
   },
   {
-    "id": "problem4",
+    "id": "4",
     "title": "Binary Search",
     "difficulty": "Medium",
     "description": "Implement a binary search algorithm to find the index of a target value in a sorted array. Return -1 if the target is not found.",
@@ -141,7 +141,7 @@
     ]
   },
   {
-    "id": "problem5",
+    "id": "5",
     "title": "Maximum Subarray",
     "difficulty": "Hard",
     "description": "Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.",

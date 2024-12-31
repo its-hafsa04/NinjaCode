@@ -11,7 +11,7 @@ admin.initializeApp({
 const app = express();
 app.use(cors(
   {
-    origin: ['https://ninja-code-frontend.vercel.app'],
+    origin: [process.env.FRONTEND_URL ||'https://ninja-code-frontend.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }
