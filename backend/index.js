@@ -1,13 +1,14 @@
 const express = require('express');
 const admin = require('firebase-admin');
 const cors = require('cors');
+require('dotenv').config();
 
 // Initialize Firebase Admin SDK
-const serviceAccount = require('../leetcode-1bdec-firebase-adminsdk-orb1s-be580fc140.json');
+const serviceAccount = require('./leetcode-1bdec-firebase-adminsdk-orb1s-be580fc140.js');
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
-
+//console.log(serviceAccount);
 const app = express();
 
 // CORS configuration

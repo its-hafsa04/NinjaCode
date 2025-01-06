@@ -5,7 +5,6 @@ import { getAuth, signInWithPopup } from "firebase/auth";
 import { app, db } from "../firebase";
 import { GoogleAuthProvider } from "firebase/auth";
 import GoogleIcon from "../assets/google.svg";
-import GithubIcon from "../assets/github.svg";
 import { doc, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 const provider = new GoogleAuthProvider();
@@ -54,10 +53,10 @@ const Signup = () => {
         });
         console.log(user.uid);
         navigate("/");
-        toast.success("Login Successful!");
+        toast.success("Welcome to NinjaCode!");
       })
       .catch((error) => {
-        toast.error(error.response.data.message);
+        toast.error(error.message);
       });
   }
 
@@ -156,10 +155,6 @@ const Signup = () => {
                     >
                       <img src={GoogleIcon} className="w-5 h-5 mr-2" />
                       Continue with Google
-                    </button>
-                    <button className="w-full flex justify-center items-center gap-2 py-3 px-4 border rounded font-light text-md hover:bg-gray-200 focus:outline-none focus:ring-2 -mt-2">
-                      <img src={GithubIcon} className="w-5 h-5 mr-2" />
-                      Continue with Github
                     </button>
                   </div>
                 </form>
