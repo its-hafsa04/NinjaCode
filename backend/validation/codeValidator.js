@@ -102,17 +102,67 @@ class CodeValidator {
           const actualOutput = actualLength;
       `,
       4: `
+      const input = JSON.parse(testCase.input);
+      const expectedOutput = JSON.parse(testCase.expectedOutput);
+      const actualOutput = isValid(input);
+      const passed = actualOutput === expectedOutput;
+    `,
+      5: `
           const args = JSON.parse(testCase.input);
           const expectedOutput = JSON.parse(testCase.expectedOutput);
           const actualOutput = search(...args);
           const passed = actualOutput === expectedOutput;
       `,
-      5: `
+    6: `
+      const input = JSON.parse(testCase.input);
+      const expectedOutput = JSON.parse(testCase.expectedOutput);
+      const actualOutput = firstUniqChar(input);
+      const passed = actualOutput === expectedOutput;
+    `,
+    7: `
+      const args = JSON.parse(testCase.input);
+      const nums = [...args[0]];
+      const k = args[1];
+      rotate(nums, k);
+      const expectedOutput = JSON.parse(testCase.expectedOutput);
+      const passed = compareArrays(nums, expectedOutput);
+      const actualOutput = nums;
+    `,
+    8: `
           const args = JSON.parse(testCase.input);
           const expectedOutput = JSON.parse(testCase.expectedOutput);
           const actualOutput = maxSubArray(args);
           const passed = actualOutput === expectedOutput;
-      `
+      `,
+    9: `
+      const input = JSON.parse(testCase.input);
+      const expectedOutput = JSON.parse(testCase.expectedOutput);
+      const actualOutput = merge(input);
+      const passed = JSON.stringify(actualOutput) === JSON.stringify(expectedOutput);
+    `,
+    10: `
+      const operations = JSON.parse(testCase.input);
+      const expectedOutput = JSON.parse(testCase.expectedOutput);
+      const results = [];
+      let cache;
+      
+      for (let i = 0; i < operations[0].length; i++) {
+        const op = operations[0][i];
+        const args = operations[1][i];
+        
+        if (op === "LRUCache") {
+          cache = new LRUCache(...args);
+          results.push(null);
+        } else if (op === "put") {
+          results.push(cache.put(...args));
+        } else if (op === "get") {
+          results.push(cache.get(...args));
+        }
+      }
+      
+      const passed = JSON.stringify(results) === JSON.stringify(expectedOutput);
+      const actualOutput = results;
+    `
     };
 
     return `

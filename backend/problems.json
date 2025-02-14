@@ -108,6 +108,48 @@
   },
   {
     "id": "4",
+    "title": "Valid Parentheses",
+    "difficulty": "Easy",
+    "description": "Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. The string is valid if all open brackets are closed by the same type of bracket in the correct order.",
+    "examples": [
+      {
+        "input": "\"(){}[]\"",
+        "output": "true",
+        "explanation": "Each opening bracket is closed by its corresponding closing bracket"
+      },
+      {
+        "input": "\"([)]\"",
+        "output": "false",
+        "explanation": "The brackets are not closed in the correct order"
+      }
+    ],
+    "constraints": [
+      "1 <= s.length <= 10^4",
+      "s consists of parentheses only '()[]{}'"
+    ],
+    "starterCode": {
+      "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar isValid = function(s) {\n    // Write your solution here\n};"
+    },
+    "testCases": [
+      {
+        "input": "\"()\"",
+        "expectedOutput": "true",
+        "explanation": "Simple matching parentheses"
+      },
+      {
+        "input": "\"()[]{}\"",
+        "expectedOutput": "true",
+        "explanation": "Multiple types of valid brackets"
+      },
+      {
+        "input": "\"(]\"",
+        "expectedOutput": "false",
+        "explanation": "Mismatched brackets"
+      }
+    ]
+  },
+  {
+    "id": "5",
     "title": "Binary Search",
     "difficulty": "Medium",
     "description": "Implement a binary search algorithm to find the index of a target value in a sorted array. Return -1 if the target is not found.",
@@ -141,7 +183,77 @@
     ]
   },
   {
-    "id": "5",
+    "id": "6",
+    "title": "First Non-Repeating Character",
+    "difficulty": "Medium",
+    "description": "Given a string s, find the first non-repeating character and return its index. If it does not exist, return -1.",
+    "examples": [
+      {
+        "input": "\"leetcode\"",
+        "output": "0",
+        "explanation": "'l' is the first character that appears only once"
+      }
+    ],
+    "constraints": [
+      "1 <= s.length <= 10^5",
+      "s consists of only lowercase English letters"
+    ],
+    "starterCode": {
+      "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar firstUniqChar = function(s) {\n    // Write your solution here\n};"
+    },
+    "testCases": [
+      {
+        "input": "\"leetcode\"",
+        "expectedOutput": "0",
+        "explanation": "First unique character 'l' is at index 0"
+      },
+      {
+        "input": "\"loveleetcode\"",
+        "expectedOutput": "2",
+        "explanation": "First unique character 'v' is at index 2"
+      },
+      {
+        "input": "\"aabb\"",
+        "expectedOutput": "-1",
+        "explanation": "No unique character exists"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Rotate Array",
+    "difficulty": "Medium",
+    "description": "Given an array, rotate the array to the right by k steps, where k is non-negative. Try to come up with a solution that uses O(1) extra space.",
+    "examples": [
+      {
+        "input": "[1,2,3,4,5,6,7], k = 3",
+        "output": "[5,6,7,1,2,3,4]",
+        "explanation": "Rotate array by 3 steps to the right"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10^5",
+      "-2^31 <= nums[i] <= 2^31 - 1",
+      "0 <= k <= 10^5"
+    ],
+    "starterCode": {
+      "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {void} Do not return anything\n */\nvar rotate = function(nums, k) {\n    // Write your solution here\n};"
+    },
+    "testCases": [
+      {
+        "input": "[[1,2,3,4,5,6,7], 3]",
+        "expectedOutput": "[5,6,7,1,2,3,4]",
+        "explanation": "Standard rotation case"
+      },
+      {
+        "input": "[[-1,-100,3,99], 2]",
+        "expectedOutput": "[3,99,-1,-100]",
+        "explanation": "Rotation with negative numbers"
+      }
+    ]
+  },
+  {
+    "id": "8",
     "title": "Maximum Subarray",
     "difficulty": "Hard",
     "description": "Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.",
@@ -174,6 +286,73 @@
         "input": "[5,4,-1,7,8]",
         "expectedOutput": "23",
         "explanation": "All positive numbers"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Merge Intervals",
+    "difficulty": "Hard",
+    "description": "Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.",
+    "examples": [
+      {
+        "input": "[[1,3],[2,6],[8,10],[15,18]]",
+        "output": "[[1,6],[8,10],[15,18]]",
+        "explanation": "Since intervals [1,3] and [2,6] overlap, merge them into [1,6]"
+      }
+    ],
+    "constraints": [
+      "1 <= intervals.length <= 10^4",
+      "intervals[i].length == 2",
+      "0 <= starti <= endi <= 10^4"
+    ],
+    "starterCode": {
+      "javascript": "/**\n * @param {number[][]} intervals\n * @return {number[][]}\n */\nvar merge = function(intervals) {\n    // Write your solution here\n};"
+    },
+    "testCases": [
+      {
+        "input": "[[1,3],[2,6],[8,10],[15,18]]",
+        "expectedOutput": "[[1,6],[8,10],[15,18]]",
+        "explanation": "Merge overlapping intervals"
+      },
+      {
+        "input": "[[1,4],[4,5]]",
+        "expectedOutput": "[[1,5]]",
+        "explanation": "Merge intervals that touch"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "LRU Cache",
+    "difficulty": "Hard",
+    "description": "Design a data structure that follows the constraints of a Least Recently Used (LRU) cache. Implement the LRUCache class with get and put methods.",
+    "examples": [
+      {
+        "input": "LRUCache lRUCache = new LRUCache(2); lRUCache.put(1, 1); lRUCache.put(2, 2); lRUCache.get(1);",
+        "output": "1",
+        "explanation": "Returns 1 since it was just accessed"
+      }
+    ],
+    "constraints": [
+      "1 <= capacity <= 3000",
+      "0 <= key <= 10^4",
+      "0 <= value <= 10^5",
+      "At most 2 * 10^5 calls will be made to get and put"
+    ],
+    "starterCode": {
+      "javascript": "/**\n * @param {number} capacity\n */\nvar LRUCache = function(capacity) {\n    // Initialize your data structure here\n};\n\n/** \n * @param {number} key\n * @return {number}\n */\nLRUCache.prototype.get = function(key) {\n    // Implement get method\n};\n\n/** \n * @param {number} key \n * @param {number} value\n * @return {void}\n */\nLRUCache.prototype.put = function(key, value) {\n    // Implement put method\n};"
+    },
+    "testCases": [
+      {
+        "input": "[\"LRUCache\", \"put\", \"put\", \"get\", \"put\", \"get\", \"get\"], [[2], [1, 1], [2, 2], [1], [3, 3], [2], [3]]",
+        "expectedOutput": "[null, null, null, 1, null, -1, 3]",
+        "explanation": "Test basic cache operations"
+      },
+      {
+        "input": "[\"LRUCache\", \"put\", \"put\", \"put\", \"get\"], [[1], [1, 1], [2, 2], [3, 3], [1]]",
+        "expectedOutput": "[null, null, null, null, -1]",
+        "explanation": "Test capacity constraint"
       }
     ]
   }
