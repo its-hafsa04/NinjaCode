@@ -12,7 +12,7 @@ admin.initializeApp({
 const app = express();
 // CORS configuration
 app.use(cors({
-  origin: 'https://ninja-code-lake.vercel.app',
+  origin: ['http://localhost:5173'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
 }));
