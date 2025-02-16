@@ -1,8 +1,8 @@
 import { Typewriter } from 'react-simple-typewriter';
 import { Code2, Brain, Zap } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../firebase';
-import Footer from './Footer';
+import { auth } from '../firebase.ts';
+import Footer from './Footer.tsx';
 
 const LandingPage = () => {
   const navigate = useNavigate();

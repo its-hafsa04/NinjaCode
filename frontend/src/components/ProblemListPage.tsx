@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { auth, db } from '../firebase';
+import { auth, db } from '../firebase.ts';
 import { collection, getDocs } from 'firebase/firestore';
 import { CheckCircle } from 'lucide-react';
 import axios from 'axios';

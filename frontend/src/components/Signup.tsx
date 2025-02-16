@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { signUp } from "../Services/auth";
+import { signUp } from "../Services/auth.tsx";
 import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithPopup } from "firebase/auth";
-import { app, db } from "../firebase";
+import { app, db } from "../firebase.ts";
 import { GoogleAuthProvider } from "firebase/auth";
 import GoogleIcon from "../assets/google.svg";
 import { doc, setDoc } from "firebase/firestore";

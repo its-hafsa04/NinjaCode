@@ -1,6 +1,6 @@
 import { Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { auth } from '../firebase';
+import { auth } from '../firebase.ts';
 import { onAuthStateChanged } from 'firebase/auth';
 
 interface ProtectedRouteProps {
